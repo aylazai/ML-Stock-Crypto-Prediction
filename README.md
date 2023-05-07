@@ -1,16 +1,25 @@
-# ML-Stock-Crypto-Prediction
+# ML Stock and Crypto Prediction
 
-## Summary
+This project is a Python script that uses machine learning logistic regression to predict stock and crypto prices (or rather returns). The model is based on a classification model that takes the prior N days' asset directions and predicts the return. The direction of the asset determines whether it should be bought or sold.
 
-This script is a machine learning logistic regression model used to predict stock prices (or rather returns) in Python.
+## Model Overview
 
-## The Model
+The model uses logistic regression, a type of supervised learning algorithm used for classification, to predict the direction of the asset (+/-) as the dependent variable. The independent variable is the prior N days' asset directions. The logistic regression model uses a sigmoid function to produce a probability score, which is then thresholded to determine the predicted direction of the asset. 
 
-In a nutshell, this model is a classification model which takes the prior N days' assets directions and predicts the return. Whether the return is positive or negative determines the direction of the assets. If the predicted direction is positive the asset will be bought or held, if it's negative the asset is assumed to be shorted.
+## Technologies Used
 
-#### Dependent Variable = Direction of the asset (+/-)
-#### Independent Variable =  Prior *N* Days Directions
+The project uses the following technologies:
+
+- Python
+- NumPy
+- Pandas
+- scikit-learn
 
 ## Assumptions
 
-Note I've assumed there are no trading costs to simplify the problem.
+Note that this model assumes that there are no trading costs to simplify the problem. Additionally, the model focuses on predicting asset returns rather than absolute prices.
+
+
+## Future Work
+
+This project can be further improved by using more advanced machine learning algorithms such as neural networks and decision trees. Additionally, incorporating more features such as volume and news sentiment can improve the accuracy of the model.
